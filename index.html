@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+  <meta name="theme-color" content="#0b0f14"/>
+  <link rel="manifest" href="manifest.webmanifest"/>
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png"/>
+  <title>Piss Up Cup Scorer</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="brand">
+        <div class="title">Piss Up Cup Scorer</div>
+        <div class="badge" id="routeBadge">Home</div>
+      </div>
+      <div class="chips">
+        <span class="chip" id="offlineChip">Offline-ready</span>
+        <button id="btnCareer" class="primary">Career Stats</button>
+      </div>
+    </div>
+
+    <div id="view"></div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modalBackdrop" id="modalBackdrop" role="dialog" aria-modal="true">
+    <div class="modal">
+      <div class="modalHeader">
+        <h3 id="modalTitle">Pick</h3>
+        <button id="modalClose">Close</button>
+      </div>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+<script src="app.js"></script>
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('./sw.js');
+}
+</script>
+</body>
+</html>
